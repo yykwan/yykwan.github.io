@@ -11,20 +11,173 @@
     <nav>
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
-            <a href="cats.html">Cat Photos</a>
+            <a href="cats.html">Meow News</a>
+            <a href="about.html">About</a>
         </div>
     </nav>
 
     <main>
         <div class="home-content">
-            <h1 class="typing-effect">Hi, I'm Your Name</h1>
-            <p>A passionate developer creating futuristic solutions</p>
+            <div class="carousel-container projects-carousel">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <a href="projects.html">
+                            <div class="project-card">
+                                <h3>Project One</h3>
+                                <p>Updating Soon</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="projects.html">
+                            <div class="project-card">
+                                <h3>Project Two</h3>
+                                <p>Updating Soon</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="projects.html">
+                            <div class="project-card">
+                                <h3>Project Three</h3>
+                                <p>Updating Soon</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Duplicate items for seamless scrolling -->
+                    <div class="carousel-item">
+                        <a href="projects.html">
+                            <div class="project-card">
+                                <h3>Project One</h3>
+                                <p>Updating Soon</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="projects.html">
+                            <div class="project-card">
+                                <h3>Project Two</h3>
+                                <p>Updating Soon</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="projects.html">
+                            <div class="project-card">
+                                <h3>Project Three</h3>
+                                <p>Updating Soon</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h1 class="typing-effect">Hi, I'm Yany</h1>
+            <p>still thinking what I should write here</p>
+            <div class="carousel-container cats-carousel">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <a href="cats.html">
+                            <div class="cat-card">
+                                <img src="meownews/MEOWNEWS_982025.png">
+                                <p>Alert!</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="cats.html">
+                            <div class="cat-card">
+                                <img src="meownews/MEOWNEWS_982025.png">
+                                <p>Alert!</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="cats.html">
+                            <div class="cat-card">
+                                <img src="meownews/MEOWNEWS_982025.png">
+                                <p>Alert!</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="cats.html">
+                            <div class="cat-card">
+                                <img src="meownews/MEOWNEWS_982025.png">
+                                <p>Alert!</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Duplicate items for seamless scrolling -->
+                    <div class="carousel-item">
+                        <a href="cats.html">
+                            <div class="cat-card">
+                                <img src="meownews/MEOWNEWS_982025.png">
+                                <p>Alert!</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="cats.html">
+                            <div class="cat-card">
+                                <img src="meownews/MEOWNEWS_982025.png">
+                                <p>Alert!</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="cats.html">
+                            <div class="cat-card">
+                                <img src="meownews/MEOWNEWS_982025.png">
+                                <p>Alert!</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="cats.html">
+                            <div class="cat-card">
+                                <img src="meownews/MEOWNEWS_982025.png">
+                                <p>Alert!</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        // Carousel auto-scroll functionality (right to left)
+        const carousels = document.querySelectorAll('.carousel-container');
+        carousels.forEach(carousel => {
+            const track = carousel.querySelector('.carousel-track');
+            let isPaused = false;
+
+            // Auto-scroll right to left
+            function scrollCarousel() {
+                if (!isPaused) {
+                    track.scrollLeft += 1;
+                    if (track.scrollLeft >= track.scrollWidth / 2) {
+                        track.scrollLeft = 0;
+                    }
+                }
+            }
+
+            // Run auto-scroll every 30ms
+            let scrollInterval = setInterval(scrollCarousel, 30);
+
+            // Pause on hover
+            carousel.addEventListener('mouseenter', () => {
+                isPaused = true;
+            });
+
+            // Resume on mouse leave
+            carousel.addEventListener('mouseleave', () => {
+                isPaused = false;
+            });
+        });
+    </script>
 </body>
 </html>
