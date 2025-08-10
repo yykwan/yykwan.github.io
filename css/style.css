@@ -291,6 +291,14 @@ p {
     .nav-links {
         justify-content: center; /* Center align on mobile */
     }
+    .carousel-item .project-card h3 {
+        font-size: 1rem; /* Reduced from 1.2rem */
+        overflow-wrap: break-word; /* Allow text to wrap within padding */
+    }
+    .carousel-item .project-card p {
+        font-size: 0.8rem; /* Reduced from 0.9rem */
+        overflow-wrap: break-word; /* Allow text to wrap within padding */
+    }
 }
 
 @media (min-width: 1200px) {
