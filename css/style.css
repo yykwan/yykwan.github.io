@@ -306,7 +306,7 @@ p {
         overflow-wrap: break-word; /* Allow text to wrap within padding */
     }
     main {
-        padding-top: 8rem; /* Adjust to match or exceed navbar height */
+        padding-top: 16rem; /* Adjust to match or exceed navbar height */
     }
 }
 
