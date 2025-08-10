@@ -287,6 +287,12 @@ p {
     }
 }
 
+@media (max-width: 768px) {
+    .nav-links {
+        justify-content: center; /* Center align on mobile */
+    }
+}
+
 @media (min-width: 1200px) {
     .home-content, .section-content {
         max-width: 1200px;
