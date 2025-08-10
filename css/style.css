@@ -173,12 +173,8 @@ p {
 }
 
 .project-card {
-    width: 40vw;
-    min-width: 180px;
-    max-width: 250px;
-    height: 26.72vw; /* 167px relative to 40vw (167/250 * 40) */
-    min-height: 120px; /* Minimum height */
-    max-height: 167px;
+    width: calc(100%-2rem);
+    height: auto; /* 167px relative to 40vw (167/250 * 40) */
     display: flex;
     flex-direction: column;
     overflow: hidden;
