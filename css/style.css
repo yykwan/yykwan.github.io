@@ -309,7 +309,7 @@ p {
         overflow-wrap: break-word; /* Allow text to wrap within padding */
     }
     main {
-        padding-top: 10; /* Adjust to match or exceed navbar height */
+        padding-top: 5rem !important; /* Fallback to pixels for compatibility */
     }
 }
 
