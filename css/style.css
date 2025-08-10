@@ -129,12 +129,13 @@ p {
     max-width: 250px; /* Cap at original size */
 }
 
-.project-list a .project-card p { 
+.project-list a.project-card{
+    text-decoration: none; /* Remove underline from links */
+}
+.project-list a .project-card > p { 
     text-decoration: none !important;
 }
-.project-list .project-card p {
-    text-decoration: none !important; /* Fallback to directly target <p> inside .project-card */
-}
+
 
 /* Carousel Styles (for Home Page) */
 .carousel-container {
