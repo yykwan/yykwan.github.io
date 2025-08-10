@@ -99,7 +99,7 @@ main {
 h2 {
     font-size: 2rem;
     color: #ffffff;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 p {
@@ -187,8 +187,8 @@ p {
 }
 
 .cat-card img {
-    width: 202px; /* Fits within 1.5rem side padding */
-    height: 271px; /* Matches 1080x1450 aspect ratio */
+    width: 224.4px; /* Fits within 1.5rem side padding */
+    height: 301px; /* Matches 1080x1450 aspect ratio */
     object-fit: cover; /* Crop images to fit dimensions */
     border-radius: 5px;
     margin-bottom: 0.3rem;
@@ -311,21 +311,21 @@ p {
     }
 
     .cat-card img {
-        width: 200px;
-        height: 268px; /* Adjusted for 200px width with 1080:1450 aspect ratio (200 * 1450 / 1080 ≈ 268) */
+        width: 182.4px;
+        height: 245px; /* Adjusted for 200px width with 1080:1450 aspect ratio (200 * 1450 / 1080 ≈ 268) */
     }
 
     .project-card, .cat-card {
-        padding: 0.8rem; /* Further reduced padding */
+        padding: 1rem; /* Further reduced padding */
         padding-bottom: 1.2rem; /* Adjusted padding beneath content */
     }
 
     .carousel-track {
-        animation: scroll 30s linear infinite; /* Slower scroll for single column */
+        animation: scroll 20s linear infinite; /* Slower scroll for single column */
     }
 
     @keyframes scroll {
-        0% { transform: translateY(0); } /* Vertical scroll for single column */
-        100% { transform: translateY(-100%); }
+        0% { transform: translateX(0); } /* Vertical scroll for single column */
+        100% { transform: translateX(-50%); }
     }
 }
