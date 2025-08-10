@@ -98,6 +98,10 @@ main {
     margin: 0 auto;
 }
 
+.project-detail {
+    text-align: left; /* Left alignment for project pages */
+}
+
 h2 {
     font-size: 2rem;
     color: #ffffff;
