@@ -52,9 +52,9 @@ nav {
 /* Main Content */
 main {
     min-height: 100vh;
-    padding: 3rem 1rem;
+    padding: 6rem 1rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -136,6 +136,9 @@ p {
     text-decoration: none !important;
 }
 
+ul{
+    padding-left:2rem;
+}
 
 /* Carousel Styles (for Home Page) */
 .carousel-container {
@@ -171,6 +174,9 @@ p {
     min-width: 180px;
     max-width: 250px;
 }
+.carousel-item .project-card{
+    height: 150px;
+}
 
 .project-card, .cat-card {
     background: rgba(255, 255, 255, 0.1);
@@ -182,7 +188,7 @@ p {
 
 .project-card {
     width: calc(100%-2rem);
-    height: auto; /* 167px relative to 40vw (167/250 * 40) */
+    height: auto; 
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -309,7 +315,7 @@ p {
         overflow-wrap: break-word; /* Allow text to wrap within padding */
     }
     main {
-        padding-top: 80px !important; 
+        padding-top: 96px !important; 
     }
 }
 
