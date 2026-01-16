@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-img {
+            max-width: 90vw;
+            max-height: 80vh;
+            border-radius: 1em;
+            box-shadow: 0 2px 16px rgba(163, 201, 247, 0.25);
+            background: #fff;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 2em;
+            right: 2em;
+            font-size: 2em;
+            color: #fff;
+            cursor: pointer;
+            z-index: 1001;
+        }
+    </style>
+    <style>
+        .project-cards {
+            display: flex;
+            gap: 2em;
+            flex-wrap: wrap;
+            margin-top: 2em;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 1.2em;
+            box-shadow: 0 2px 16px rgba(163, 201, 247, 0.13);
+            flex: 1 1 340px;
+            min-width: 320px;
+            max-width: 480px;
+            padding: 2em 2em 1.5em 2em;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2em;
+            border: 1.5px solid #f3f3f3;
+            position: relative;
+        }
+
+        .project-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5em;
+            margin-bottom: 0.2em;
+        }
+
+        .project-title {
+            color: #222;
+            font-size: 1.18em;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .github-link {
+            margin-left: 0.5em;
+            color: #888;
+            font-size: 1.15em;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .github-link:hover {
+            color: #24292f;
+        }
+
+        .project-subtitle {
+            color: #a3c9f7;
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 0.2em;
+        }
+
+        .project-date {
+            color: #bdbdbd;
+            font-size: 0.95em;
+            margin-bottom: 1em;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+        }
+
+        .project-desc {
+            list-style: disc outside;
+            color: #888;
+            font-size: 0.97em;
+            margin-left: 1.2em;
+            margin-bottom: 0.5em;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Your Name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="main-card-container">
+        <nav class="top-card-nav">
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="project.html" class="active">Project</a>
+            <a href="photo.html">Photos</a>
+            <a href="contact.html">Contact</a>
+            <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+        </nav>
+        <section class="about-card">
+            <div class="about-bio">
+                <h1 class="about-title">Projects</h1>
+                <div class="project-cards">
+                    <div class="project-card">
+                        <div class="project-title-row">
+                            <span class="project-title">Autoimmune Disease Machine Learning Challenge</span>
+                            <a class="github-link" href="https://github.com/yykwan/Projects/tree/main/ADMLC"
+                                target="_blank" title="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="project-subtitle">Crunch Lab</div>
+                        <div class="project-date">DEC 2024 - APR 2025</div>
+                        <ul class="project-desc">
+                            <li><strong>Built AI models to:</strong> Predict gene expression from pathology images,
+                                input missing genes via contrastive learning, discover cancer-risk markers in IBD.</li>
+                            <li>As someone without a biology background, the learning curve was steep but rewarding!
+                                Though my final submission wasn't accepted, the experience was invaluable.</li>
+                            <li><strong>Below is a sample image from the challenge:</strong></li>
+                        </ul>
+                        <div class="project-photos">
+                            <img src="assets/sample.png" alt="sample" class="drw-photo"
+                                style="width:96%;display:block;margin:0 auto 0.5em auto;border-radius:0.7em;background:#e3f0fc;object-fit:cover;min-height:180px;max-height:320px;cursor:pointer;" />
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title-row">
+                            <span class="project-title">DRW - Crypto Market Prediction</span>
+                            <a class="github-link" href="https://github.com/yykwan/Projects/tree/main/DRW%20-%20Crypto%20Market%20Prediction"
+                                target="_blank" title="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="project-subtitle">Kaggle</div>
+                        <div class="project-date">MAY 2025 - JUL 2025</div>
+                        <ul class="project-desc">
+                            <li><strong>Feature Engineering:</strong> Created rolling statistics (mean, std, min/max
+                                over 5-30 periods); added technical indicators (RSI, momentum); interactions (ratios,
+                                differences), and optimized memory with downcasting (np.int8, np.float32)</li>
+                            <li><strong>Modeling:</strong> Trained an ensemble (VotingRegressor) of Ridge Regression (L2
+                                regularization) and XGBoost (tree_method="hist"); validation via TimeSeriesSplit to
+                                prevent leakage; cross-validated correlation for scoring</li>
+                            <li><strong>Pipeline Optimization:</strong> Processed lagged features in chunks
+                                (chunk_size=10) for memory efficiency; reconstructed test-set timestamps using
+                                precomputed offsets to align temporal dependencies</li>
+                            <li><strong>Analysis:</strong> Results interpretation with feature importance plots
+                                (matplotlib) and prediction distributions; deployed batch prediction (batch_size=50k) to
+                                handle large-scale inference</li>
+                        </ul>
+                        <div class="project-photos">
+                            <img src="assets/DRW-2.png" alt="DRW Project Photo 1" class="drw-photo"
+                                style="width:48%;margin-right:2%;border-radius:0.7em;background:#e3f0fc;object-fit:cover;min-height:120px;cursor:pointer;" />
+                            <img src="assets/DRW-3.png" alt="DRW Project Photo 2" class="drw-photo"
+                                style="width:48%;border-radius:0.7em;background:#e3f0fc;object-fit:cover;min-height:120px;cursor:pointer;" />
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title-row">
+                            <span class="project-title">Cat To Do App</span>
+                            <a class="github-link" href="https://github.com/yykwan/Projects/tree/main/GamifiedCatTodo"
+                                target="_blank" title="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="project-subtitle">A cat-themed SwiftUI task manager</div>
+                        <div class="project-date">MAY 2025</div>
+                        <ul class="project-desc">
+                            <li><strong>SwiftUI Architecture:</strong> Used @StateObject for TaskViewModel persistence; implemented @EnvironmentObject for shared TaskManager state; applied @AppStorage for Dark Mode preference persistence</li>
+                            <li><strong>Core Data Integration:</strong> Managed task objects with NSManagedObjectContext; implemented NSFetchedResultsController for effiecient updates</li>
+                            <li><strong>Notification System:</strong>Custom UNUserNotificationCenterDelegate for foreground/background handling; deep linkage via notification payloads; notification rescheduling on app foreground</li>
+                            <li><strong>Thread Management:</strong> Used DispatchQueue.main.asyncAfter for delayed initialization; implemented thread-safe notification handling</li>
+                            <li><strong>UI/UX Features:</strong> Dynamic color scheme switching</li>
+                        </ul>
+                        <div class="project-photos">
+                            <div style="display:flex;flex-wrap:wrap;gap:2%;justify-content:center;padding-bottom:0.2em;">
+                              <img src="assets/cat_app_photos/main_screen.png" alt="Cat App Photo 1" class="drw-photo"
+                                  style="width:30%;min-width:120px;max-width:160px;margin-bottom:0.5em;border-radius:0.7em;background:#e3f0fc;object-fit:cover;min-height:100px;max-height:180px;cursor:pointer;" />
+                              <img src="assets/cat_app_photos/settings_screen.png" alt="Cat App Photo 2" class="drw-photo"
+                                  style="width:30%;min-width:120px;max-width:160px;margin-bottom:0.5em;border-radius:0.7em;background:#e3f0fc;object-fit:cover;min-height:100px;max-height:180px;cursor:pointer;" />
+                              <img src="assets/cat_app_photos/task_screen.png" alt="Cat App Photo 3" class="drw-photo"
+                                  style="width:30%;min-width:120px;max-width:160px;margin-bottom:0.5em;border-radius:0.7em;background:#e3f0fc;object-fit:cover;min-height:100px;max-height:180px;cursor:pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<div id="modal" class="modal">
+    <span class="modal-close" id="modalClose">&times;</span>
+    <img id="modalImg" class="modal-img" src="" alt="Large Project Photo" />
+</div>
+<script>
+    document.querySelectorAll('.drw-photo').forEach(function (img) {
+        img.addEventListener('click', function () {
+            document.getElementById('modalImg').src = img.src;
+            document.getElementById('modal').classList.add('active');
+        });
+    });
+    document.getElementById('modalClose').onclick = function () {
+        document.getElementById('modal').classList.remove('active');
+        document.getElementById('modalImg').src = '';
+    };
+    document.getElementById('modal').onclick = function (e) {
+        if (e.target === this) {
+            document.getElementById('modal').classList.remove('active');
+            document.getElementById('modalImg').src = '';
+        }
+    };
+</script>
+</body>
+
+</html>

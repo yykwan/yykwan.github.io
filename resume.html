@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Your Name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script defer src="script.js"></script>
+    <style>
+        .resume-section {
+            position: relative;
+            margin-left: 2.5em;
+            padding-left: 1.5em;
+        }
+
+        .resume-section::before {
+            content: "";
+            position: absolute;
+            left: 0.5em;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #a3c9f7;
+            border-radius: 2px;
+            z-index: 0;
+        }
+
+        .resume-entry {
+            position: relative;
+            margin-bottom: 2.2em;
+            padding-left: 0.5em;
+        }
+
+        .resume-entry::before {
+            content: "";
+            position: absolute;
+            left: -2em;
+            top: 0.7em;
+            width: 0.8em;
+            height: 0.8em;
+            background: #a3c9f7;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #fff;
+            z-index: 1;
+        }
+
+        .resume-company {
+            font-weight: 700;
+            font-size: 1.05em;
+            margin-bottom: 0.2em;
+        }
+
+        .resume-date {
+            color: #a3c9f7;
+            font-size: 0.95em;
+            margin-bottom: 0.2em;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+
+        .resume-role {
+            font-style: italic;
+            font-size: 0.98em;
+            margin-bottom: 0.3em;
+        }
+
+        .resume-desc {
+            list-style: disc outside;
+            margin-top: 0.5em;
+            color: #888;
+            font-size: 0.95em;
+            padding-left: 1.2em;
+        }
+        .resume-desc li {
+            margin-bottom: 0.7em;
+        }
+
+        .skills-section {
+            margin-top: 2.5em;
+            margin-bottom: 2em;
+            text-align: center;
+        }
+
+        .skills-title {
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 1em;
+            letter-spacing: 0.04em;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7em;
+            justify-content: center;
+            margin-bottom: 0.5em;
+        }
+
+        .skill-badge {
+            background: #e3f0fc;
+            color: #222;
+            border-radius: 2em;
+            padding: 0.45em 1.2em;
+            font-size: 0.97em;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(163, 201, 247, 0.13);
+            border: 1px solid #a3c9f7;
+            transition: background 0.2s, color 0.2s;
+            margin-bottom: 0.2em;
+        }
+
+        .skill-badge:hover {
+            background: #a3c9f7;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-card-container">
+        <nav class="top-card-nav">
+            <a href="about.html">About</a>
+            <a href="resume.html" class="active">Resume</a>
+            <a href="project.html">Project</a>
+            <a href="photo.html">Photos</a>
+            <a href="contact.html">Contact</a>
+            <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+        </nav>
+        <section class="about-card">
+            <div class="about-bio">
+                <h1 class="about-title"><i class="fas fa-briefcase"></i> Experience</h1>
+                <div class="resume-section">
+                    <div class="resume-entry">
+                        <h2 class="resume-company">WorldQuant</h2>
+                        <div class="resume-date">AUG 2024 – Present</div>
+                        <div class="resume-role"><strong>Research Consultant</strong></div>
+                        <ul class="resume-desc">
+                            <li>Conduct independent quantitative research as part of WorldQuant’s research program</li>
+                            <li>Design and tested predictive financial models (Alphas) using historical market and
+                                alternative data</li>
+                        </ul>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">Freelance Tutoring</h2>
+                        <div class="resume-date">AUG 2024 – Present</div>
+                        <div class="resume-role"><strong>Academic Tutor</strong></div>
+                        <ul class="resume-desc">
+                            <li>Provide tailored instructions in English and Mathematics to Junior Secondary school
+                                students through both private one-on-one and small group settings</li>
+                        </ul>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">MAEC Students’ Club</h2>
+                        <div class="resume-date">SEPT 2025 – Present</div>
+                        <div class="resume-role"><strong>External Vice President</strong></div>
+                        <ul class="resume-desc">
+                            <li>Led the coordination of events designed to connect MAEC students, fostering
+                                engagement through partnerships with university staff and alumni</li>
+                            <li>Worked within a team to plan event details, assign roles, and support each other to
+                                ensure the smooth operation of all activities </li>
+                        </ul>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">Crunch Lab</h2>
+                        <div class="resume-date">DEC 2024 – APR 2025</div>
+                        <div class="resume-role"><strong>Data Scientist Researcher (DAO Member)</strong></div>
+                        <ul class="resume-desc">
+                            <li>Participate in a competition focusing on identifying genetic biomarkers for cancer risk
+                                in IBD patients</li>
+                            <li>Created models to rank genes based on their ability to distinguish between dysplasia and
+                                noncancerous tissues using real-world biomedical datasets</li>
+                        </ul>
+                    </div>
+                </div>
+                <h1 class="about-title"><i class="fas fa-graduation-cap"></i> Education</h1>
+                <div class="resume-section">
+                    <div class="resume-entry">
+                        <h2 class="resume-company">Hong Kong University of Science and Technology (HKUST)</h2>
+                        <div class="resume-date">SEPT 2024 – MAY 2028 (EXPECTED)</div>
+                        <div class="resume-role"><strong>BSc in Mathematics and Economics, Minors in bioengineering and Actuarial Mathematics</strong></div>
+                        <ul class="resume-desc">
+                            <li>Coursework: Machine Learning, Actuarial Mathematics, Mathematical Analysis, Probability, Economics</li>
+                            <li>Activities and Societies: MAEC Students' Club, Investment Circle General Member, iGEM, Cross Country Team</li>
+                        </ul>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">Stewards Pooi Kei College</h2>
+                        <div class="resume-date">SEPT 2018 – July 2024</div>
+                        <div class="resume-role"><strong>HKDSE</strong></div>
+                        <ul class="resume-desc">
+                            <li>Economics, BAFS (Accounting), Chemistry</li>
+                        </ul>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">The University of Hong Kong (HKU)</h2>
+                        <div class="resume-date">JUN 2023 – JUL 2023 </div>
+                        <div class="resume-role"><strong>Visiting student for university mathematics</strong></div>
+                        <ul class="resume-desc">
+                            <li>Coursework: University Mathematics</li>
+                        </ul>
+                    </div>
+                </div>
+                <h1 class="about-title"><i class="fas fa-certificate"></i> Certifications & Exams</h1>
+                <div class="resume-section">
+                    <div class="resume-entry">
+                        <h2 class="resume-company">Society of Actuaries</h2>
+                        <div class="resume-date">MAR 2026 (Expected) </div>
+                        <div class="resume-role"><strong>Exam: Probability</strong></div>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">EDHEC Business School</h2>
+                        <div class="resume-date">APR 2025</div>
+                        <div class="resume-role"><strong>Advanced Portfolio Construction and Analysis with Python</strong></div>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">WorldQuant</h2>
+                        <div class="resume-date">DEC 2024</div>
+                        <div class="resume-role"><strong>WorldQuant Challenge Gold Level</strong></div>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">Bloomberg</h2>
+                        <div class="resume-date">SEPT 2024</div>
+                        <div class="resume-role"><strong>Bloomberg Market Concepts</strong></div>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">AmplifyME</h2>
+                        <div class="resume-date">SEPT 2024</div>
+                        <div class="resume-role"><strong>Finance Accelerator</strong></div>
+                    </div>
+                    <div class="resume-entry">
+                        <h2 class="resume-company">Hong Kong Securities and Investment Institute</h2>
+                        <div class="resume-date">JUL 2024</div>
+                        <div class="resume-role"><strong>Licensing Examination for Securities and Futures Intermediaries Paper 1</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

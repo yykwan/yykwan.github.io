@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos | Your Name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script defer src="script.js"></script>
+    <style>
+      .photo-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5em;
+        padding: 2em 0;
+      }
+      .photo-card {
+        background: #fff;
+        border-radius: 1.2em;
+        box-shadow: 0 2px 16px rgba(163,201,247,0.13);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: box-shadow 0.2s;
+      }
+      .photo-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-bottom: 1px solid #e3f0fc;
+      }
+      .photo-card .caption {
+        padding: 1em;
+        font-size: 0.98em;
+        color: #444;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <div class="main-card-container">
+        <nav class="top-card-nav">
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="project.html">Project</a>
+            <a href="photo.html" class="active">Photos</a>
+            <a href="contact.html">Contact</a>
+            <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+        </nav>
+        <section class="about-card">
+            <div class="about-bio">
+                <h1 class="about-title"><i class="fas fa-camera-retro"></i> Photography</h1>
+                <div class="photo-gallery">
+                    <!-- Example photo cards, replace src and caption as needed -->
+                    <div class="photo-card">
+                        <img src="assets/profile.jpg" alt="Sample Photo">
+                        <div class="caption">Sample Caption 1</div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="assets/profile.jpg" alt="Sample Photo">
+                        <div class="caption">Sample Caption 2</div>
+                    </div>
+                    <!-- Add more photo-card divs as you add photos -->
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
