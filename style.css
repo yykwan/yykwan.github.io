@@ -345,6 +345,10 @@
     border: 1px solid #a3c9f7;
     min-height: 120px;
     transition: box-shadow 0.2s, transform 0.2s;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 320px;
 }
 /* Consistent card style for all pages */
 .work-card, .interest-card, .doing-card, .about-card, .contact-btn {
@@ -366,6 +370,9 @@
 .doing-desc {
     color: #666;
     font-size: 0.9em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 @media (max-width: 900px) {
@@ -860,3 +867,4 @@ footer p {
         justify-content: center;
     }
 }
+
