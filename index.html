@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=about.html" />
-    <title>Redirecting to About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yany Kwan | Portfolio</title>
+    <meta name="description" content="Personal website of Yany Kwan.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <p>If you are not redirected automatically, <a href="about.html">click here</a>.</p>
+    <span id="catCursorFollower" class="cat-cursor-follower" aria-hidden="true">🐱</span>
+
+    <div class="layout cat-cursor">
+        <aside class="sidebar reveal" data-reveal>
+            <img class="avatar" src="assets/profile_cat_pic.png" alt="Yany Kwan profile image">
+            <h1 class="name">Yany Kwan</h1>
+            <p class="subtitle">Mathematics and Economics Student at HKUST</p>
+
+            <nav class="side-nav" aria-label="Main">
+                <a href="index.html" class="active">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="project.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="side-meta">
+                <span>Email: yykwanaa@connect.ust.hk</span>
+                <span>GitHub: github.com/yykwan</span>
+            </div>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+        </aside>
+
+        <main class="content">
+            <div class="panel">
+                <section class="panel-section">
+                    <span class="eyebrow">Welcome</span>
+                    <h2 class="hero-title">Hi! I'm Yany.</h2>
+                    <p class="hero-copy">a second-year Mathematics and Economics student at HKUST, applying quantitative skills to diverse domains - from HFT and AI to computational biology and actuarial science.</p>
+                    <p class="hero-copy">I also enjoy coding and game development, pursuits that blend analytical thinking with creative execution.</p>
+                    <p class="hero-copy">Seeking opportunities where I can apply analytical rigor to develop innovative solutions at the intersection of these disciplines.</p>
+                    <div class="cta-row">
+                        <a class="btn btn-primary" href="project.html">See Projects</a>
+                        <a class="btn btn-secondary" href="resume.html">View Resume</a>
+                    </div>
+                </section>
+
+                <section class="panel-section">
+                    <span class="eyebrow">What I'm Doing</span>
+                    <div class="card-grid reveal" data-reveal>
+                        <article class="feature-card">
+                            <i class="fas fa-bolt"></i>
+                            <h3 class="feature-title">HFT Development</h3>
+                            <p class="muted">Designing and optimizing ultra-low latency trading systems, market-making strategies, and execution algorithms.</p>
+                        </article>
+                        <article class="feature-card">
+                            <i class="fas fa-brain"></i>
+                            <h3 class="feature-title">AI/ML Engineering</h3>
+                            <p class="muted">Applying machine learning and statistical models to quantitative financial problems.</p>
+                        </article>
+                        <article class="feature-card">
+                            <i class="fas fa-chart-pie"></i>
+                            <h3 class="feature-title">Actuarial Mathematics</h3>
+                            <p class="muted">Applying probabilistic modeling and risk assessment to financial, insurance, and economic systems.</p>
+                        </article>
+                        <article class="feature-card">
+                            <i class="fas fa-dna"></i>
+                            <h3 class="feature-title">Computational bioengineering</h3>
+                            <p class="muted">Applying data science and computational models to biological systems and medical data analysis.</p>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="site-footer">
+                <span>&copy; <span id="currentYear"></span> Yany Kwan</span>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>

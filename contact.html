@@ -3,50 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact |  Yany Kwan</title>
+    <title>Contact | Yany Kwan</title>
+    <meta name="description" content="Contact details of Yany Kwan.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="main-card-container">
-        <nav class="top-card-nav">
-            <a href="about.html">About</a>
-            <a href="resume.html">Resume</a>
-            <a href="project.html">Project</a>
-            <a href="contact.html" class="active">Contact</a>
-            <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
-        </nav>
-        <section class="about-card">
-            <div class="about-bio">
-                <h1 class="about-title">Contact</h1>
-                <div class="doing-grid">
-                    <div class="doing-card">
-                        <i class="fas fa-envelope doing-icon"></i>
-                        <div>
-                            <div class="doing-label">Email</div>
-                            <div class="doing-desc">yykwanaa@connect.ust.hk</div>
-                        </div>
+    <span id="catCursorFollower" class="cat-cursor-follower" aria-hidden="true">🐱</span>
+
+    <div class="layout cat-cursor">
+        <aside class="sidebar reveal" data-reveal>
+            <img class="avatar" src="assets/profile_cat_pic.png" alt="Yany Kwan profile image">
+            <h1 class="name">Yany Kwan</h1>
+            <p class="subtitle">Mathematics and Economics Student at HKUST</p>
+            <nav class="side-nav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="project.html">Projects</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+        </aside>
+
+        <main class="content">
+            <div class="panel">
+                <section class="panel-section reveal" data-reveal>
+                    <span class="eyebrow">Contact</span>
+                    <h2 class="hero-title">Contact</h2>
+                    <div class="contact-grid">
+                        <article class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3 class="contact-title">Email</h3>
+                            <p class="muted">yykwanaa@connect.ust.hk</p>
+                        </article>
+                        <article class="contact-card">
+                            <i class="fab fa-linkedin"></i>
+                            <h3 class="contact-title">LinkedIn</h3>
+                            <p class="muted"><a href="https://www.linkedin.com/in/yany-kwan-92737424a" target="_blank" rel="noopener noreferrer">linkedin.com/in/yany-kwan</a></p>
+                        </article>
+                        <article class="contact-card">
+                            <i class="fab fa-github"></i>
+                            <h3 class="contact-title">GitHub</h3>
+                            <p class="muted"><a href="https://github.com/yykwan" target="_blank" rel="noopener noreferrer">github.com/yykwan</a></p>
+                        </article>
                     </div>
-                    <div class="doing-card">
-                        <i class="fab fa-linkedin doing-icon"></i>
-                        <div>
-                            <div class="doing-label">LinkedIn</div>
-                            <div class="doing-desc"><a href="https://www.linkedin.com/in/yany-kwan-92737424a" target="_blank">linkedin.com/in/yany-kwan</a></div>
-                        </div>
-                    </div>
-                    <div class="doing-card">
-                        <i class="fab fa-github doing-icon"></i>
-                        <div>
-                            <div class="doing-label">GitHub</div>
-                            <div class="doing-desc"><a href="https://github.com/yykwan" target="_blank">github.com/yykwan</a></div>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </div>
-        </section>
+
+            <footer class="site-footer">
+                <span>&copy; <span id="currentYear"></span> Yany Kwan</span>
+            </footer>
+        </main>
     </div>
 </body>
 </html>

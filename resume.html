@@ -1,239 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume |  Yany Kwan</title>
+    <title>Resume | Yany Kwan</title>
+    <meta name="description" content="Resume of Yany Kwan.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <script defer src="script.js"></script>
-    <style>
-        .resume-section {
-            position: relative;
-            margin-left: 2.5em;
-            padding-left: 1.5em;
-        }
-
-        .resume-section::before {
-            content: "";
-            position: absolute;
-            left: 0.5em;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #a3c9f7;
-            border-radius: 2px;
-            z-index: 0;
-        }
-
-        .resume-entry {
-            position: relative;
-            margin-bottom: 2.2em;
-            padding-left: 0.5em;
-        }
-
-        .resume-entry::before {
-            content: "";
-            position: absolute;
-            left: -2em;
-            top: 0.7em;
-            width: 0.8em;
-            height: 0.8em;
-            background: #a3c9f7;
-            border-radius: 50%;
-            box-shadow: 0 0 0 2px #fff;
-            z-index: 1;
-        }
-
-        .resume-company {
-            font-weight: 700;
-            font-size: 1.05em;
-            margin-bottom: 0.2em;
-        }
-
-        .resume-date {
-            color: #a3c9f7;
-            font-size: 0.95em;
-            margin-bottom: 0.2em;
-            font-weight: 600;
-            letter-spacing: 0.03em;
-        }
-
-        .resume-role {
-            font-style: italic;
-            font-size: 0.98em;
-            margin-bottom: 0.3em;
-        }
-
-        .resume-desc {
-            list-style: disc outside;
-            margin-top: 0.5em;
-            color: #888;
-            font-size: 0.95em;
-            padding-left: 1.2em;
-        }
-        .resume-desc li {
-            margin-bottom: 0.7em;
-        }
-
-        .skills-section {
-            margin-top: 2.5em;
-            margin-bottom: 2em;
-            text-align: center;
-        }
-
-        .skills-title {
-            font-weight: 700;
-            font-size: 1.1em;
-            margin-bottom: 1em;
-            letter-spacing: 0.04em;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.7em;
-            justify-content: center;
-            margin-bottom: 0.5em;
-        }
-
-        .skill-badge {
-            background: #e3f0fc;
-            color: #222;
-            border-radius: 2em;
-            padding: 0.45em 1.2em;
-            font-size: 0.97em;
-            font-weight: 500;
-            box-shadow: 0 2px 8px rgba(163, 201, 247, 0.13);
-            border: 1px solid #a3c9f7;
-            transition: background 0.2s, color 0.2s;
-            margin-bottom: 0.2em;
-        }
-
-        .skill-badge:hover {
-            background: #a3c9f7;
-            color: #fff;
-        }
-    </style>
 </head>
-
 <body>
-    <div class="main-card-container">
-        <nav class="top-card-nav">
-            <a href="about.html">About</a>
-            <a href="resume.html" class="active">Resume</a>
-            <a href="project.html">Project</a>
-            <a href="contact.html">Contact</a>
-            <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
-        </nav>
-        <section class="about-card">
-            <div class="about-bio">
-                <h1 class="about-title"><i class="fas fa-briefcase"></i> Experience</h1>
-                <div class="resume-section">
-                    <div class="resume-entry">
-                        <h2 class="resume-company">WorldQuant</h2>
-                        <div class="resume-date">AUG 2024 – Present</div>
-                        <div class="resume-role"><strong>Research Consultant</strong></div>
-                        <ul class="resume-desc">
-                            <li>Conduct independent quantitative research as part of WorldQuant’s research program</li>
-                            <li>Design and tested predictive financial models (Alphas) using historical market and
-                                alternative data</li>
-                        </ul>
+    <span id="catCursorFollower" class="cat-cursor-follower" aria-hidden="true">🐱</span>
+
+    <div class="layout cat-cursor">
+        <aside class="sidebar reveal" data-reveal>
+            <img class="avatar" src="assets/profile_cat_pic.png" alt="Yany Kwan profile image">
+            <h1 class="name">Yany Kwan</h1>
+            <p class="subtitle">Mathematics and Economics Student at HKUST</p>
+            <nav class="side-nav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="resume.html" class="active">Resume</a>
+                <a href="project.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+        </aside>
+
+        <main class="content">
+            <div class="panel">
+                <section class="panel-section reveal" data-reveal>
+                    <span class="eyebrow">Experience</span>
+                    <div class="timeline">
+                        <article class="timeline-entry">
+                            <div class="timeline-meta">AUG 2024 - Present</div>
+                            <h3 class="timeline-role">WorldQuant</h3>
+                            <p><strong>Research Consultant</strong></p>
+                            <ul class="muted">
+                                <li>Conduct independent quantitative research as part of WorldQuant's research program</li>
+                                <li>Design and tested predictive financial models (Alphas) using historical market and alternative data</li>
+                            </ul>
+                        </article>
+                        <article class="timeline-entry">
+                            <div class="timeline-meta">AUG 2024 - Present</div>
+                            <h3 class="timeline-role">Freelance Tutoring</h3>
+                            <p><strong>Academic Tutor</strong></p>
+                            <ul class="muted">
+                                <li>Provide tailored instructions in English and Mathematics to Junior Secondary school students through both private one-on-one and small group settings</li>
+                            </ul>
+                        </article>
+                        <article class="timeline-entry">
+                            <div class="timeline-meta">SEPT 2025 - Present</div>
+                            <h3 class="timeline-role">MAEC Students' Club</h3>
+                            <p><strong>External Vice President</strong></p>
+                            <ul class="muted">
+                                <li>Led the coordination of events designed to connect MAEC students, fostering engagement through partnerships with university staff and alumni</li>
+                                <li>Worked within a team to plan event details, assign roles, and support each other to ensure the smooth operation of all activities</li>
+                            </ul>
+                        </article>
+                        <article class="timeline-entry">
+                            <div class="timeline-meta">DEC 2024 - APR 2025</div>
+                            <h3 class="timeline-role">Crunch Lab</h3>
+                            <p><strong>Data Scientist Researcher (DAO Member)</strong></p>
+                            <ul class="muted">
+                                <li>Participate in a competition focusing on identifying genetic biomarkers for cancer risk in IBD patients</li>
+                                <li>Created models to rank genes based on their ability to distinguish between dysplasia and noncancerous tissues using real-world biomedical datasets</li>
+                            </ul>
+                        </article>
                     </div>
-                    <div class="resume-entry">
-                        <h2 class="resume-company">Freelance Tutoring</h2>
-                        <div class="resume-date">AUG 2024 – Present</div>
-                        <div class="resume-role"><strong>Academic Tutor</strong></div>
-                        <ul class="resume-desc">
-                            <li>Provide tailored instructions in English and Mathematics to Junior Secondary school
-                                students through both private one-on-one and small group settings</li>
-                        </ul>
+                </section>
+
+                <section class="panel-section reveal" data-reveal>
+                    <span class="eyebrow">Education</span>
+                    <div class="timeline">
+                        <article class="timeline-entry">
+                            <div class="timeline-meta">SEPT 2024 - MAY 2028 (EXPECTED)</div>
+                            <h3 class="timeline-role">Hong Kong University of Science and Technology (HKUST)</h3>
+                            <p><strong>BSc in Mathematics and Economics, Minors in bioengineering and Actuarial Mathematics</strong></p>
+                            <ul class="muted">
+                                <li>Coursework: Machine Learning, Actuarial Mathematics, Mathematical Analysis, Probability, Economics</li>
+                                <li>Activities and Societies: MAEC Students' Club, Investment Circle General Member, iGEM, Cross Country Team</li>
+                            </ul>
+                        </article>
+                        <article class="timeline-entry">
+                            <div class="timeline-meta">SEPT 2018 - JUL 2024</div>
+                            <h3 class="timeline-role">Stewards Pooi Kei College</h3>
+                            <p><strong>HKDSE</strong></p>
+                            <ul class="muted">
+                                <li>Economics, BAFS (Accounting), Chemistry</li>
+                            </ul>
+                        </article>
+                        <article class="timeline-entry">
+                            <div class="timeline-meta">JUN 2023 - JUL 2023</div>
+                            <h3 class="timeline-role">The University of Hong Kong (HKU)</h3>
+                            <p><strong>Visiting student</strong></p>
+                            <ul class="muted">
+                                <li>Coursework: University Mathematics</li>
+                            </ul>
+                        </article>
                     </div>
-                    <div class="resume-entry">
-                        <h2 class="resume-company">MAEC Students’ Club</h2>
-                        <div class="resume-date">SEPT 2025 – Present</div>
-                        <div class="resume-role"><strong>External Vice President</strong></div>
-                        <ul class="resume-desc">
-                            <li>Led the coordination of events designed to connect MAEC students, fostering
-                                engagement through partnerships with university staff and alumni</li>
-                            <li>Worked within a team to plan event details, assign roles, and support each other to
-                                ensure the smooth operation of all activities </li>
-                        </ul>
+                </section>
+
+                <section class="panel-section reveal" data-reveal>
+                    <span class="eyebrow">Certifications & Exams</span>
+                    <div class="card-grid">
+                        <article class="feature-card">
+                            <h3 class="feature-title">EDHEC Business School</h3>
+                            <p class="muted">Advanced Portfolio Construction and Analysis with Python (APR 2025)</p>
+                        </article>
+                        <article class="feature-card">
+                            <h3 class="feature-title">WorldQuant</h3>
+                            <p class="muted">WorldQuant Challenge Gold Level (DEC 2024)</p>
+                        </article>
+                        <article class="feature-card">
+                            <h3 class="feature-title">Bloomberg</h3>
+                            <p class="muted">Bloomberg Market Concepts (SEPT 2024)</p>
+                        </article>
+                        <article class="feature-card">
+                            <h3 class="feature-title">AmplifyME</h3>
+                            <p class="muted">Finance Accelerator (SEPT 2024)</p>
+                        </article>
+                        <article class="feature-card">
+                            <h3 class="feature-title">Hong Kong Securities and Investment Institute</h3>
+                            <p class="muted">Licensing Examination for Securities and Futures Intermediaries Paper 1 (JUL 2024)</p>
+                        </article>
                     </div>
-                    <div class="resume-entry">
-                        <h2 class="resume-company">Crunch Lab</h2>
-                        <div class="resume-date">DEC 2024 – APR 2025</div>
-                        <div class="resume-role"><strong>Data Scientist Researcher (DAO Member)</strong></div>
-                        <ul class="resume-desc">
-                            <li>Participate in a competition focusing on identifying genetic biomarkers for cancer risk
-                                in IBD patients</li>
-                            <li>Created models to rank genes based on their ability to distinguish between dysplasia and
-                                noncancerous tissues using real-world biomedical datasets</li>
-                        </ul>
-                    </div>
-                </div>
-                <h1 class="about-title"><i class="fas fa-graduation-cap"></i> Education</h1>
-                <div class="resume-section">
-                    <div class="resume-entry">
-                        <h2 class="resume-company">Hong Kong University of Science and Technology (HKUST)</h2>
-                        <div class="resume-date">SEPT 2024 – MAY 2028 (EXPECTED)</div>
-                        <div class="resume-role"><strong>BSc in Mathematics and Economics, Minors in bioengineering and Actuarial Mathematics</strong></div>
-                        <ul class="resume-desc">
-                            <li>Coursework: Machine Learning, Actuarial Mathematics, Mathematical Analysis, Probability, Economics</li>
-                            <li>Activities and Societies: MAEC Students' Club, Investment Circle General Member, iGEM, Cross Country Team</li>
-                        </ul>
-                    </div>
-                    <div class="resume-entry">
-                        <h2 class="resume-company">Stewards Pooi Kei College</h2>
-                        <div class="resume-date">SEPT 2018 – July 2024</div>
-                        <div class="resume-role"><strong>HKDSE</strong></div>
-                        <ul class="resume-desc">
-                            <li>Economics, BAFS (Accounting), Chemistry</li>
-                        </ul>
-                    </div>
-                    <div class="resume-entry">
-                        <h2 class="resume-company">The University of Hong Kong (HKU)</h2>
-                        <div class="resume-date">JUN 2023 – JUL 2023 </div>
-                        <div class="resume-role"><strong>Visiting student</strong></div>
-                        <ul class="resume-desc">
-                            <li>Coursework: University Mathematics</li>
-                        </ul>
-                    </div>
-                </div>
-                <h1 class="about-title"><i class="fas fa-certificate"></i> Certifications & Exams</h1>
-                <div class="resume-section">
-                    <div class="resume-entry">
-                        <h2 class="resume-company">EDHEC Business School</h2>
-                        <div class="resume-date">APR 2025</div>
-                        <div class="resume-role"><strong>Advanced Portfolio Construction and Analysis with Python</strong></div>
-                    </div>
-                    <div class="resume-entry">
-                        <h2 class="resume-company">WorldQuant</h2>
-                        <div class="resume-date">DEC 2024</div>
-                        <div class="resume-role"><strong>WorldQuant Challenge Gold Level</strong></div>
-                    </div>
-                    <div class="resume-entry">
-                        <h2 class="resume-company">Bloomberg</h2>
-                        <div class="resume-date">SEPT 2024</div>
-                        <div class="resume-role"><strong>Bloomberg Market Concepts</strong></div>
-                    </div>
-                    <div class="resume-entry">
-                        <h2 class="resume-company">AmplifyME</h2>
-                        <div class="resume-date">SEPT 2024</div>
-                        <div class="resume-role"><strong>Finance Accelerator</strong></div>
-                    </div>
-                    <div class="resume-entry">
-                        <h2 class="resume-company">Hong Kong Securities and Investment Institute</h2>
-                        <div class="resume-date">JUL 2024</div>
-                        <div class="resume-role"><strong>Licensing Examination for Securities and Futures Intermediaries Paper 1</strong></div>
-                    </div>
-                </div>
+                </section>
             </div>
-        </section>
+
+            <footer class="site-footer">
+                <span>&copy; <span id="currentYear"></span> Yany Kwan</span>
+            </footer>
+        </main>
     </div>
 </body>
-
 </html>
